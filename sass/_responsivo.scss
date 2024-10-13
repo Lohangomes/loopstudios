@@ -1,0 +1,241 @@
+@media (max-width: 1024px) {
+  .container-page {
+    display: flex;
+    flex-flow: column;
+
+    .conteudo-interactive {
+      position: static;
+      margin-top: 4rem;
+      text-align: center;
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+
+  .container-cartoes {
+    .cartoes {
+      grid-template-rows: 8rem;
+
+      .lista-cartoes {
+        grid-template-columns: repeat(2, 1fr);
+
+        li {
+          a {
+            span {
+              left: 4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .container-rodape {
+    flex-flow: column;
+    gap: 4rem;
+    .links-rodape {
+      align-items: center;
+    }
+
+    .social {
+      .links-sociais {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .cabecalho {
+  background-image: url(../images/mobile/image-hero.jpg);
+    background-position: center;
+  }
+
+  .container-cabecalho {
+    position: relative;
+
+    .flex-container-cabecalho {
+      .logo {
+        z-index: 11;
+      }
+
+      .menu-hamburguer {
+        display: block;
+        cursor: pointer;
+        z-index: 12;
+
+        &.ativo {
+          .js-icone-aberto {
+            display: none;
+          }
+
+          .js-icone-fechar {
+            display: block;
+            transition: 0.3s;
+          }
+        }
+
+        .js-icone-fechar {
+          display: none;
+        }
+      }
+
+      .navegacao {
+        display: flex;
+        align-items: center;
+        padding-left: 6rem;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        min-height: 100vh;
+        width: 100%;
+        background-color: black;
+        z-index: 10;
+        display: none;
+        animation: menuAbertura 0.5s forwards;
+
+        &.ativo {
+          display: flex;
+        }
+
+        .item-lista {
+          flex-flow: column;
+          gap: 3rem;
+
+          li {
+            text-transform: uppercase;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes menuAbertura {
+    from {
+      opacity: 0;
+      transform: translateY(-100vh);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .container-cabecalho {
+    .logo {
+      max-width: 16rem;
+    }
+
+    .texto-cabecalho {
+      font-size: 4rem;
+      padding: 2rem 3rem;
+      max-width: 40rem;
+    }
+  }
+
+  .container-page {
+    padding: 15% 4%;
+    flex-flow: column;
+    gap: 2rem;
+    .conteudo-interactive {
+      text-align: center;
+      position: static;
+      padding: 0;
+      max-width: 100%;
+
+      .texto-interactive {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .container-cartoes {
+    .cartoes {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, auto);
+
+      .btn {
+        grid-row: 3 / 4;
+        margin: 0 auto;
+      }
+
+      .texto-cartao {
+        font-size: 3.4rem;
+        text-align: center;
+      }
+
+      .lista-cartoes {
+        grid-template-columns: 1fr;
+        align-content: center;
+
+        li {
+          a {
+            span {
+              font-size: 2rem;
+              left: 4rem;
+              bottom: 3.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .container-rodape {
+    flex-flow: column;
+
+    .links-rodape {
+      .item-lista {
+        flex-flow: column;
+      }
+    }
+
+    .social {
+      align-items: center;
+    }
+  }
+}
+
+@media (min-width: 280px) and (max-width: 375px) {
+  .container-cabecalho {
+    padding: 4% 5%;
+
+    .logo {
+      max-width: 12rem;
+    }
+    .texto-cabecalho {
+      font-size: 3.5rem;
+      padding: 1rem;
+      transform: translateY(80%);
+    }
+  }
+
+  .container-cartoes {
+    .cartoes {
+      .lista-cartoes {
+        li {
+          a {
+            span {
+              bottom: 2rem;
+              left: 2rem;
+              font-size: 1.8rem;
+              max-width: 100%;
+            }
+          }
+
+          &:nth-child(4) {
+            span {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

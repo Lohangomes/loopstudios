@@ -1,0 +1,76 @@
+.container-page {
+ 
+  .imagem-conteudo-informacao {
+    position: relative;
+  }
+
+  .conteudo-interactive {
+   position: absolute;
+    max-width: 50.0rem;
+    background-color: #ffffff;
+    padding: 7% 0 0 7%;
+    bottom: 0;
+    right: 8.0rem;
+    p {
+      line-height: 1.4;
+      margin-top: 2.5rem;
+    }
+  }
+}
+
+.container-cartoes {
+  .cartoes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 5rem auto;
+    row-gap: 5rem;
+
+    .lista-cartoes {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column: 1 / 4;
+      gap: 2rem;
+
+      li {
+        a {
+          position: relative;
+          span {
+            font-family: $-fonte-secundaria;
+            font-size: 2.6rem;
+            text-transform: uppercase;
+            display: inline-block;
+            position: absolute;
+            bottom: 5rem;
+            right: 7rem;
+            transition: color 0.3s ease-in;
+            max-width: 14rem;
+          }
+        }
+
+        &:hover {
+          a {
+            span {
+              color: black;
+            }
+
+            img {
+              opacity: 0.7;
+            }
+          }
+        }
+
+        &:nth-child(4) {
+          span {
+            max-width: 8rem;
+            right: 13rem;
+          }
+        }
+      }
+
+      img {
+        width: 100%;
+        transition: opacity 0.3s ease-in;
+      }
+    }
+  }
+}

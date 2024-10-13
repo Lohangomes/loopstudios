@@ -1,0 +1,26 @@
+.cabecalho {
+  background-image: url(../images/desktop/image-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  height: 70rem;
+}
+
+.container-cabecalho {
+  height: 100%;
+
+  .flex-container-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .menu-hamburguer {
+      display: none;
+      cursor: pointer;
+    }
+
+    .logo {
+      z-index: 1;
+    }
+  }
+}

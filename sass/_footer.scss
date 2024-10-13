@@ -1,0 +1,60 @@
+.rotape {
+  background-color: black;
+}
+
+.container-rodape {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+
+  .links-rodape {
+    display: flex;
+    flex-flow: column;
+    gap: 4rem;
+  }
+
+  .social {
+    display: flex;
+    flex-flow: column;
+    gap: 5rem;
+
+    .links-sociais {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 2rem;
+
+      li {
+        position: relative;
+
+        a {
+          &::after {
+            transition: 0.3s ease-in;
+            content: " ";
+            background-color: #ffff;
+            height: 3px;
+            width: 0;
+            position: absolute;
+            display: block;
+            left: 0;
+            bottom: -10px;
+          }
+        }
+
+        &:hover {
+          a {
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  p {
+  
+    color: #ffff;
+  }
+}

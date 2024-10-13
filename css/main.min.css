@@ -1,0 +1,396 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 144rem;
+  margin: 0 auto;
+  padding: 5% 10%;
+}
+
+.texto-cabecalho {
+  font-size: 6rem;
+  text-transform: uppercase;
+  border: 3px solid rgb(255, 255, 255);
+  max-width: 65rem;
+  font-weight: 300;
+  padding: 4rem 5rem;
+  color: white;
+  transform: translateY(50%);
+}
+
+.texto-interactive {
+  font-size: 3.6rem;
+  color: hsl(0, 0%, 41%);
+  text-transform: uppercase;
+}
+
+a {
+  color: white;
+  font-family: "Alata", sans-serif;
+}
+
+.btn {
+  justify-self: flex-end;
+  align-self: flex-start;
+  width: 14rem;
+  padding: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: transparent;
+  transition: background 0.3s ease-in, color 0.3s ease-in;
+  letter-spacing: 3px;
+}
+.btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.texto-cartao {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+.item-lista {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.item-lista li {
+  position: relative;
+}
+.item-lista li a::after {
+  transition: 0.3s ease-in;
+  content: " ";
+  background-color: white;
+  height: 4px;
+  width: 0;
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: -10px;
+}
+.item-lista li:hover a::after {
+  width: 100%;
+  transition: 0.3s ease-in;
+}
+
+.cabecalho {
+  background-image: url(../images/desktop/image-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  height: 70rem;
+}
+
+.container-cabecalho {
+  height: 100%;
+}
+.container-cabecalho .flex-container-cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container-cabecalho .flex-container-cabecalho .menu-hamburguer {
+  display: none;
+  cursor: pointer;
+}
+.container-cabecalho .flex-container-cabecalho .logo {
+  z-index: 1;
+}
+
+.container-page .imagem-conteudo-informacao {
+  position: relative;
+}
+.container-page .conteudo-interactive {
+  position: absolute;
+  max-width: 50rem;
+  background-color: #ffffff;
+  padding: 7% 0 0 7%;
+  bottom: 0;
+  right: 8rem;
+}
+.container-page .conteudo-interactive p {
+  line-height: 1.4;
+  margin-top: 2.5rem;
+}
+
+.container-cartoes .cartoes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 5rem auto;
+  row-gap: 5rem;
+}
+.container-cartoes .cartoes .lista-cartoes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column: 1/4;
+  gap: 2rem;
+}
+.container-cartoes .cartoes .lista-cartoes li a {
+  position: relative;
+}
+.container-cartoes .cartoes .lista-cartoes li a span {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.6rem;
+  text-transform: uppercase;
+  display: inline-block;
+  position: absolute;
+  bottom: 5rem;
+  right: 7rem;
+  transition: color 0.3s ease-in;
+  max-width: 14rem;
+}
+.container-cartoes .cartoes .lista-cartoes li:hover a span {
+  color: black;
+}
+.container-cartoes .cartoes .lista-cartoes li:hover a img {
+  opacity: 0.7;
+}
+.container-cartoes .cartoes .lista-cartoes li:nth-child(4) span {
+  max-width: 8rem;
+  right: 13rem;
+}
+.container-cartoes .cartoes .lista-cartoes img {
+  width: 100%;
+  transition: opacity 0.3s ease-in;
+}
+
+.rotape {
+  background-color: black;
+}
+
+.container-rodape {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+.container-rodape .links-rodape {
+  display: flex;
+  flex-flow: column;
+  gap: 4rem;
+}
+.container-rodape .social {
+  display: flex;
+  flex-flow: column;
+  gap: 5rem;
+}
+.container-rodape .social .links-sociais {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+.container-rodape .social .links-sociais li {
+  position: relative;
+}
+.container-rodape .social .links-sociais li a::after {
+  transition: 0.3s ease-in;
+  content: " ";
+  background-color: white;
+  height: 3px;
+  width: 0;
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: -10px;
+}
+.container-rodape .social .links-sociais li:hover a::after {
+  width: 100%;
+}
+.container-rodape p {
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .container-page {
+    display: flex;
+    flex-flow: column;
+  }
+  .container-page .conteudo-interactive {
+    position: static;
+    margin-top: 4rem;
+    text-align: center;
+    max-width: 100%;
+    padding: 0;
+  }
+  .container-cartoes .cartoes {
+    grid-template-rows: 8rem;
+  }
+  .container-cartoes .cartoes .lista-cartoes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container-cartoes .cartoes .lista-cartoes li a span {
+    left: 4rem;
+  }
+  .container-rodape {
+    flex-flow: column;
+    gap: 4rem;
+  }
+  .container-rodape .links-rodape {
+    align-items: center;
+  }
+  .container-rodape .social .links-sociais {
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .cabecalho {
+    background-image: url(../images/mobile/image-hero.jpg);
+    background-position: center;
+  }
+  .container-cabecalho {
+    position: relative;
+  }
+  .container-cabecalho .flex-container-cabecalho .logo {
+    z-index: 11;
+  }
+  .container-cabecalho .flex-container-cabecalho .menu-hamburguer {
+    display: block;
+    cursor: pointer;
+    z-index: 12;
+  }
+  .container-cabecalho .flex-container-cabecalho .menu-hamburguer.ativo .js-icone-aberto {
+    display: none;
+  }
+  .container-cabecalho .flex-container-cabecalho .menu-hamburguer.ativo .js-icone-fechar {
+    display: block;
+    transition: 0.3s;
+  }
+  .container-cabecalho .flex-container-cabecalho .menu-hamburguer .js-icone-fechar {
+    display: none;
+  }
+  .container-cabecalho .flex-container-cabecalho .navegacao {
+    display: flex;
+    align-items: center;
+    padding-left: 6rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-height: 100vh;
+    width: 100%;
+    background-color: black;
+    z-index: 10;
+    display: none;
+    animation: menuAbertura 0.5s forwards;
+  }
+  .container-cabecalho .flex-container-cabecalho .navegacao.ativo {
+    display: flex;
+  }
+  .container-cabecalho .flex-container-cabecalho .navegacao .item-lista {
+    flex-flow: column;
+    gap: 3rem;
+  }
+  .container-cabecalho .flex-container-cabecalho .navegacao .item-lista li {
+    text-transform: uppercase;
+    font-size: 2rem;
+  }
+  @keyframes menuAbertura {
+    from {
+      opacity: 0;
+      transform: translateY(-100vh);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+@media (max-width: 560px) {
+  .container-cabecalho .logo {
+    max-width: 16rem;
+  }
+  .container-cabecalho .texto-cabecalho {
+    font-size: 4rem;
+    padding: 2rem 3rem;
+    max-width: 40rem;
+  }
+  .container-page {
+    padding: 15% 4%;
+    flex-flow: column;
+    gap: 2rem;
+  }
+  .container-page .conteudo-interactive {
+    text-align: center;
+    position: static;
+    padding: 0;
+    max-width: 100%;
+  }
+  .container-page .conteudo-interactive .texto-interactive {
+    font-size: 3rem;
+  }
+  .container-cartoes .cartoes {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+  .container-cartoes .cartoes .btn {
+    grid-row: 3/4;
+    margin: 0 auto;
+  }
+  .container-cartoes .cartoes .texto-cartao {
+    font-size: 3.4rem;
+    text-align: center;
+  }
+  .container-cartoes .cartoes .lista-cartoes {
+    grid-template-columns: 1fr;
+    align-content: center;
+  }
+  .container-cartoes .cartoes .lista-cartoes li a span {
+    font-size: 2rem;
+    left: 4rem;
+    bottom: 3.5rem;
+  }
+  .container-rodape {
+    flex-flow: column;
+  }
+  .container-rodape .links-rodape .item-lista {
+    flex-flow: column;
+  }
+  .container-rodape .social {
+    align-items: center;
+  }
+}
+@media (min-width: 280px) and (max-width: 375px) {
+  .container-cabecalho {
+    padding: 4% 5%;
+  }
+  .container-cabecalho .logo {
+    max-width: 12rem;
+  }
+  .container-cabecalho .texto-cabecalho {
+    font-size: 3.5rem;
+    padding: 1rem;
+    transform: translateY(80%);
+  }
+  .container-cartoes .cartoes .lista-cartoes li a span {
+    bottom: 2rem;
+    left: 2rem;
+    font-size: 1.8rem;
+    max-width: 100%;
+  }
+  .container-cartoes .cartoes .lista-cartoes li:nth-child(4) span {
+    max-width: 100%;
+  }
+}/*# sourceMappingURL=main.min.css.map */

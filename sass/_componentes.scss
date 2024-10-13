@@ -1,0 +1,76 @@
+.texto-cabecalho {
+  font-size: 6rem;
+  text-transform: uppercase;
+  border: 3px solid rgb(255, 255, 255);
+  max-width: 65rem;
+  font-weight: 300;
+  padding: 4rem 5rem;
+  color: #ffff;
+  transform: translateY(50%);
+}
+
+.texto-interactive {
+  font-size: 3.6rem;
+  color: $-Very-Dark-Gray;
+  text-transform: uppercase;
+}
+
+a {
+  color: #ffff;
+  font-family: $-fonte-primaria;
+}
+
+.btn {
+  justify-self: flex-end;
+  align-self: flex-start;
+  width: 14rem;
+  padding: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: transparent;
+  transition: background 0.3s ease-in, color 0.3s ease-in;
+  letter-spacing: 3px;
+
+  &:hover {
+    background-color: black;
+    color: #ffff;
+  }
+}
+
+.texto-cartao {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+.item-lista {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+
+  li {
+    position: relative;
+
+    a {
+      &::after {
+        transition: 0.3s ease-in;
+        content: " ";
+        background-color: #ffff;
+        height: 4px;
+        width: 0;
+        position: absolute;
+        display: block;
+        left: 0;
+        bottom: -10px;
+      }
+    }
+
+    &:hover {
+      a {
+        &::after {
+          width: 100%;
+          transition: 0.3s ease-in;
+        }
+      }
+    }
+  }
+}
